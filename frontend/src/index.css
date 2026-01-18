@@ -1,0 +1,253 @@
+/* =========================
+   FONT IMPORT (ALWAYS TOP)
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+/* =========================
+   RESET & BASE STYLES
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: "Quicksand", sans-serif;
+  color: #5a3e2b;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+/* =========================
+   APP LAYOUT
+   ========================= */
+.app {
+  width: 100%;
+  min-height: 100vh; /* FIXES MOBILE WHITE SPACE ISSUE */
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+/* =========================
+   TITLE
+   ========================= */
+h1 {
+  text-align: center;
+  background-color: #f4a226;
+  font-family: "Monoton";
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 1rem 0;
+}
+
+/* =========================
+   FORM SECTION
+   ========================= */
+.add-form {
+  background-color: #e5771f;
+  padding: 2.8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-main-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.form-group-row.secondary {
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.qty-input {
+  width: 120px; /* Slightly bigger for desktop */
+}
+
+/* =========================
+   INPUTS & BUTTONS
+   ========================= */
+button,
+select,
+input {
+  background-color: #ffebb3;
+  color: #5a3e2b;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background-color: #76c7ad;
+}
+
+/* =========================
+   LIST SECTION
+   ========================= */
+.list {
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #e5771f;
+}
+
+.list li button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* =========================
+   LIST ACTIONS
+   ========================= */
+.actions button,
+.list select {
+  text-transform: uppercase;
+  padding: 0.8rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0.8rem;
+}
+
+/* =========================
+   STATS
+   ========================= */
+.stats {
+  background-color: #76c7ad;
+  text-align: center;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    letter-spacing: -2px;
+    word-spacing: 10px;
+    padding: 1rem 0;
+  }
+
+  .form-main-row {
+    flex-direction: column;
+    gap: 2rem;
+    width: 95%;
+  }
+
+  .form-group-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+
+  .form-group {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .form-group label {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+  }
+
+  .qty-input {
+    width: 100%;
+  }
+
+  .form-group-row button {
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+  }
+
+  .form-group-row.secondary {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  .form-group-row.secondary input {
+    flex: 1;
+  }
+
+  .form-group-row.secondary button {
+    width: auto;
+    padding: 1.4rem 2rem;
+  }
+}
