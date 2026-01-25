@@ -26,6 +26,30 @@ https://shopping-list-backend-fpj3.onrender.com/api/items
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home](screenshots/dashboard.png)
+
+### ➕ Add Items
+
+![Add Items](screenshots/add-items.png)
+
+### 📋 Packed Items
+
+![Packed Items](screenshots/packed-items.png)
+
+### 🔀 Sorting Items
+
+![Sorted](screenshots/sorting.png)
+
+### 📱 Backend Api
+
+![Backend](screenshots/backend-api.png)
+
+---
+
 ## 🧑‍💻 Tech Stack
 
 ### Frontend
