@@ -2,9 +2,10 @@ import { useState } from "react";
 
 const DEFAULT_ITEMS = ["Milk", "Bread", "Rice", "Eggs", "Oil"];
 
-const SORTED_ITEMS = [...DEFAULT_ITEMS].sort((a, b) => a.localeCompare(b));
-
 export default function Form({ onFormSubmit }) {
+  const [items] = useState(
+    [...DEFAULT_ITEMS].sort((a, b) => a.localeCompare(b)),
+  );
   const [quantity, setQuantity] = useState("");
   const [unit, setUnit] = useState("");
   const [selectedItem, setSelectedItem] = useState("");
@@ -27,8 +28,10 @@ export default function Form({ onFormSubmit }) {
 
     onFormSubmit(newListItem);
 
+    setSelectedItem("");
     setQuantity("");
     setNewItem("");
+    setUnit("");
   }
 
   function handleAddNewItem() {
@@ -45,6 +48,7 @@ export default function Form({ onFormSubmit }) {
     onFormSubmit(newListItem);
     setNewItem("");
     setQuantity("");
+    setUnit("");
   }
 
   return (
@@ -63,7 +67,7 @@ export default function Form({ onFormSubmit }) {
               onChange={(e) => setSelectedItem(e.target.value)}
             >
               <option value="">-- Select an item --</option>
-              {SORTED_ITEMS.map((item) => (
+              {items.map((item) => (
                 <option key={item} value={item}>
                   {item}
                 </option>
@@ -90,7 +94,6 @@ export default function Form({ onFormSubmit }) {
 
               <option value="kg">Kg</option>
               <option value="gm">gm</option>
-              <option value="">No's</option>
             </select>
           </div>
 

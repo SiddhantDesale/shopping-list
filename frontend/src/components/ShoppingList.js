@@ -9,17 +9,14 @@ export default function ShoppingList({
 }) {
   const [sortItems, setSortItems] = useState("input");
 
-  let sortedItems;
+  let sortedItems = [...items];
 
-  if (sortItems === "input") sortedItems = items;
   if (sortItems === "description")
-    sortedItems = items
-      .slice()
-      .sort((a, b) => a.description.localeCompare(b.description));
+    sortedItems.sort((a, b) =>
+      String(a.itemName).localeCompare(String(b.itemName)),
+    );
   if (sortItems === "packed")
-    sortedItems = items
-      .slice()
-      .sort((a, b) => Number(a.packed) - Number(b.packed));
+    sortedItems.sort((a, b) => Number(a.packed) - Number(b.packed));
   return (
     <div className="list">
       <ul>
