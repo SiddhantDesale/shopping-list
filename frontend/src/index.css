@@ -1,5 +1,5 @@
 /* =========================
-   FONT IMPORT (ALWAYS TOP)
+   FONT IMPORT
    ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
 
@@ -14,6 +14,8 @@
 
 html {
   font-size: 62.5%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,6 +23,7 @@ body {
   font-family: "Quicksand", sans-serif;
   color: #5a3e2b;
   font-weight: 500;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -29,7 +32,7 @@ body {
    ========================= */
 .app {
   width: 100%;
-  min-height: 100vh; /* FIXES MOBILE WHITE SPACE ISSUE */
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
@@ -98,7 +101,7 @@ h1 {
 }
 
 .qty-input {
-  width: 120px; /* Slightly bigger for desktop */
+  width: 120px;
 }
 
 /* =========================
@@ -188,6 +191,31 @@ input[type="checkbox"] {
 }
 
 /* =========================
+   TABLET RESPONSIVE
+   ========================= */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .form-main-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-group-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .list ul {
+    width: 100%;
+    padding: 0 1.2rem;
+  }
+
+  button,
+  select,
+  input {
+    max-width: 100%;
+  }
+}
+/* =========================
    MOBILE RESPONSIVE
    ========================= */
 @media (max-width: 768px) {
@@ -205,14 +233,13 @@ input[type="checkbox"] {
   }
 
   .form-group-row {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
     gap: 1.2rem;
   }
 
   .form-group {
     width: 100%;
-    align-items: stretch;
+    align-items: center;
   }
 
   .form-group label {
@@ -224,11 +251,7 @@ input[type="checkbox"] {
   .form-group input {
     width: 100%;
     padding: 1.4rem;
-    font-size: 1.8rem;
-  }
-
-  .qty-input {
-    width: 100%;
+    font-size: 1.5rem;
   }
 
   .form-group-row button {

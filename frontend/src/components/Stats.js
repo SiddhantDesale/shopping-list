@@ -11,7 +11,6 @@ export default function Stats({ items }) {
             ? `You took everything 🥳`
             : `You have ${numItems} items on your list, and you already collected ${numPacked}(${percentage}%)`}
       </em>
-      {/* <h3>Start adding some items to your shopping list 🎉</h3> */}
     </footer>
   );
 }

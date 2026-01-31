@@ -98,7 +98,6 @@ export default function Form({ onFormSubmit }) {
               <option value="ml">ml</option>
             </select>
           </div>
-
           <button type="submit">Add</button>
         </div>
 
