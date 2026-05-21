@@ -237,6 +237,10 @@ input[type="checkbox"] {
    MOBILE RESPONSIVE
    ========================= */
 @media (max-width: 768px) {
+  .app {
+    min-height: 100dvh;
+  }
+
   h1 {
     font-size: 3rem;
     letter-spacing: -2px;
