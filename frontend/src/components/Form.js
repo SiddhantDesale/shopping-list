@@ -94,7 +94,7 @@ export default function Form({ onFormSubmit }) {
 
               <option value="kg">Kg</option>
               <option value="gm">gm</option>
-              <option value="l">litre</option>
+              <option value="litre">litre</option>
               <option value="ml">ml</option>
             </select>
           </div>

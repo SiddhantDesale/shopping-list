@@ -1,7 +1,9 @@
 export default function Item({ item, onDeleteItem, onToggleItem }) {
   return (
     <div>
-      <li>
+      <li
+        style={item.packed ? { background: "#4f5d75", color: "#ffffff" } : {}}
+      >
         <input
           type="checkbox"
           checked={item.packed}
