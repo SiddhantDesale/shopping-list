@@ -7,7 +7,7 @@ The app allows users to add, manage, sort, and track shopping items with real-ti
 https://shopping-list-siddhant.netlify.app
 
 🔗 **Backend API:**  
-https://shopping-list-backend-fpj3.onrender.com/api/items
+https://shopping-list-nsjd.onrender.com/api/items
 
 ---
 
@@ -80,7 +80,7 @@ cd backend
 ```
 
 API runs on:
-https://shopping-list-backend-fpj3.onrender.com/api/items
+https://shopping-list-nsjd.onrender.com/api/items
 
 ```bash
 cd frontend
